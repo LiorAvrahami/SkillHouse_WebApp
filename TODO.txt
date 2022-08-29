@@ -1,0 +1,4 @@
+support months being chosen with different probabuilites. this will require:
+	- connect the thumbs icons to increment, decrement probaabuility of current month
+	- save probabuility preferance to local-storage
+	- display current probabuility in format P = 1.34/12 for probabuility 0.11166
