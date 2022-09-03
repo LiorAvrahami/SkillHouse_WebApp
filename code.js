@@ -1,5 +1,13 @@
 
-let Months = ["January", " February", " March", " April", " May", " June", " July", " August", " September", " October", " November", " December"]
+let currentLanguageIdx = 0
+
+let MonthsAllLanguages = [
+  ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמרבר", "דצמבר"]
+]
+
+let Months = MonthsAllLanguages[currentLanguageIdx]
 let selectedMonthIdx = 0
 let permutation = Array(12);
 let a;
@@ -94,5 +102,11 @@ function sleep(ms) {
 
 function VoteUp() { alert("up"); }
 function VoteDown() { alert("down"); }
+
+function ChangeLang() {
+  currentLanguageIdx = (currentLanguageIdx + 1) % 3;
+  Months = MonthsAllLanguages[currentLanguageIdx];
+  reDraw();
+}
 
 makeTable();
