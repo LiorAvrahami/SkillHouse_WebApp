@@ -4,7 +4,8 @@ let currentLanguageIdx = 0
 let MonthsAllLanguages = [
   ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
   ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-  ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמרבר", "דצמבר"]
+  ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"],
+  ["תשרי", "חשוון", "כסלו", "טבת", "שבט", "אדר", "ניסן", "אייר", "סיוון", "תמוז", "אב", "אלול"]
 ]
 
 let Months = MonthsAllLanguages[currentLanguageIdx]
