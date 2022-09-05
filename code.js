@@ -105,7 +105,7 @@ function VoteUp() { alert("up"); }
 function VoteDown() { alert("down"); }
 
 function ChangeLang() {
-  currentLanguageIdx = (currentLanguageIdx + 1) % 3;
+  currentLanguageIdx = (currentLanguageIdx + 1) % MonthsAllLanguages.length;
   Months = MonthsAllLanguages[currentLanguageIdx];
   reDraw();
 }
