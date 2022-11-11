@@ -12,6 +12,8 @@
 <body>
     <div style="display: flex; flex-direction: column; justify-content: start; align-items: center;">
         <h1 style="font-size: 27px; min-height: 10vh;">Time Teacher</h1>
+        <img src="Question_mark.png" alt="Question_mark" style="position: absolute; right: 5px; top: 5px; width: 30px;"
+            onclick="OnQuestionMarkClicked()">
         <div class="DisplayBox">
             <label class="Annotation">Target</label>
             <label id="TimeRequestLable" style="font-size: 25px;">Ready!</label>
@@ -22,13 +24,13 @@
             <label id="TimeResultLable" style="font-size: 25px;">_</label>
 
         </div>
-        <div id="ScoreBox" class="DisplayBox" style="margin-bottom: 24vh;">
+        <div id="ScoreBox" class="DisplayBox" style="margin-bottom: 20vh;">
             <label class="Annotation">Score</label>
             <label id="ScoreLable" style="font-size: 25px;">_</label>
 
         </div>
         <button id="Button" onclick="ButtonClicked()"
-            style="font-size: 30px; min-width: 15vh; min-height: 15vh; padding-right: 20px; padding-left: 20px;">Start</button>
+            style="font-size: 30px; width: 23vh; height: 23vh; padding-right: 20px; padding-left: 20px;">Start</button>
     </div>
     <script type="text/javascript" src="TimeTeacher.js">
     </script>
