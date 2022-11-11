@@ -23,7 +23,7 @@ function ButtonClicked() {
         IsTimerRunning = false;
         let TimerInterval = ((new Date().getTime()) - TimerStartTime.getTime()) / 1000;
         let score = getScore(RequiredInterval, TimerInterval);
-        document.getElementById("TimeResultLable").innerHTML = TimerInterval.toFixed(2);
+        document.getElementById("TimeResultLable").innerHTML = TimerInterval.toFixed(1);
         document.getElementById("ScoreLable").innerHTML = score.toFixed(1);
         ScoreBoxOGCol = document.getElementById("ScoreBox").style.backgroundColor;
         document.getElementById("ScoreBox").style.backgroundColor = getColor(score);
