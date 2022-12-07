@@ -1,8 +1,12 @@
 function load_weights() {
     try {
-        val = JSON.parse(localStorage["weights"]);
-        if (val == undefined || val.length != 12) {
-            throw "error"
+        localStorage["weights"]
+        if (val == undefined) {
+            throw "error";
+        }
+        val = JSON.parse();
+        if (val.length != 12) {
+            throw "error";
         }
     } catch (error) {
         val = [1, 1, 1, 1,
@@ -23,6 +27,6 @@ function save_weights(weights) {
     localStorage["weights"] = JSON.stringify(weights);
 }
 
-function reset_memory(){
+function reset_memory() {
     localStorage["weights"] = NaN;
 }

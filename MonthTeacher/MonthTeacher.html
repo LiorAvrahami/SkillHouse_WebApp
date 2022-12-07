@@ -5,6 +5,9 @@
 
     <!-- <meta http-equiv="refresh" content="1"> -->
 
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
@@ -18,44 +21,32 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div style="height: 15%;">
-        <table style="height: 100%;">
-            <tr>
-                <th>
-                    <div style="height: 100%;">
-                        <button width="100%" style="background-image: url(globe.png);" onclick="ResetMemory()">
-
-                            <div style="height: 12vh; display: flex; flex-direction: column; justify-content: center;">
-                                RESET MEMORY
-                            </div>
-                        </button>
-                    </div>
-                </th>
-                <th width="20%"></th>
-                <th width="90%">
-                    <h1 style="font-size: 27px;">Months Teacher</h1>
-                    <label id="monthInfoLabel" style="font-size: 20px;">choose month number 8</label>
-                </th>
-                <th>
-                    <div style="height: 100%;">
-                        <button width="100%" style="background-image: url(globe.png);" onclick="ChangeLang()">
-                            language
-                            <div style="height: 100%;">
-                                <img src="globe.png" alt="change language" height="auto" width="100%"
-                                    style='object-fit: scale-down;'>
-                            </div>
-                        </button>
-                    </div>
-                </th>
-            </tr>
-        </table>
+    <div style="height: 15%; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+        <button style="height: 10vh; width: 8vh;" onclick="ResetMemory()">
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                RESET MEMORY
+            </div>
+        </button>
+        <div style="height: 7vh; display: flex; flex-direction: column; justify-content: center;">
+            <h1 style="font-size: 27px;">Months Teacher</h1>
+            <label id="monthInfoLabel" style="font-size: 20px;">choose month number 8</label>
+        </div>
+        <div>
+            <button style="height: 10vh;" onclick="ChangeLang()">
+                language
+                <div style="height: 7vh;">
+                    <img src="globe.png" alt="change language" height="100%" width="auto"
+                        style='object-fit: scale-down;'>
+                </div>
+            </button>
+        </div>
     </div>
 
     <div style="height: 65%;" id="TableArea">
     </div>
 
     <div style="height: 10%;" id="VoteArea">
-        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between;  align-items: center;">
             <button style="height:10vh" onclick="VoteUp()">More Of This</button>
             <label id="DisplayProb"></label>
             <button style="height:10vh" onclick="VoteDown()">Less Of This</button>
