@@ -1,4 +1,4 @@
 I think it will be best if:
-    - More of this will multiply weight by 1.3
+    - More of this will add 1 to weight
     - less of this will multiply weight by 0.8
 and every time wieghts are updated the sum is set to 1200.

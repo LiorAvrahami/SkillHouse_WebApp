@@ -121,7 +121,7 @@ makeTable();
 
 function VoteUp() {
   let weights = load_weights();
-  weights[selectedMonthIdx] *= 1.3;
+  weights[selectedMonthIdx] += 1;
   save_weights(weights);
   reDraw();
 }
