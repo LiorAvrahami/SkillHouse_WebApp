@@ -24,7 +24,7 @@ function makeTable() {
 
   tbl = document.createElement('table');
   tbl.style.width = '100%';
-  tbl.style.height = '90%';
+  tbl.style.height = '92%';
   tbl.style.border = '1px solid black';
 
   for (let rowIdx = 0; rowIdx < numRows; rowIdx++) {
@@ -71,13 +71,20 @@ function reDraw() {
     /* clear color */
     textNodes[cellIdx].style.backgroundColor = "white";
   }
+
+  // update DisplayProb
+  let weights = load_weights();
+  weight = weights[selectedMonthIdx] / sum(weights)
+  DisplayProb = document.getElementById("DisplayProb");
+  DisplayProb.innerText = "P = " + (weight * 12).toFixed(2) + "/12"
 }
 
 function shuffle() {
   permutation = makePermutation();
 
+  let weights = load_weights();
   while (true) {
-    let newSelectedMonthIdx = Math.floor(Math.random() * 12);
+    let newSelectedMonthIdx = random_choice(weights);
     if (newSelectedMonthIdx != selectedMonthIdx) {
       selectedMonthIdx = newSelectedMonthIdx;
       break;
@@ -111,3 +118,22 @@ function ChangeLang() {
 }
 
 makeTable();
+
+function VoteUp() {
+  let weights = load_weights();
+  weights[selectedMonthIdx] *= 1.3;
+  save_weights(weights);
+  reDraw();
+}
+
+function VoteDown() {
+  let weights = load_weights();
+  weights[selectedMonthIdx] *= 0.8;
+  save_weights(weights);
+  reDraw();
+}
+
+function ResetMemory() {
+  reset_memory();
+  reDraw();
+}

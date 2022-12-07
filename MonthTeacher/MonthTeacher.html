@@ -21,6 +21,16 @@
     <div style="height: 15%;">
         <table style="height: 100%;">
             <tr>
+                <th>
+                    <div style="height: 100%;">
+                        <button width="100%" style="background-image: url(globe.png);" onclick="ResetMemory()">
+
+                            <div style="height: 12vh; display: flex; flex-direction: column; justify-content: center;">
+                                RESET MEMORY
+                            </div>
+                        </button>
+                    </div>
+                </th>
                 <th width="20%"></th>
                 <th width="90%">
                     <h1 style="font-size: 27px;">Months Teacher</h1>
@@ -31,7 +41,7 @@
                         <button width="100%" style="background-image: url(globe.png);" onclick="ChangeLang()">
                             language
                             <div style="height: 100%;">
-                                <img src="globe.png" alt="thumbs up png" height="auto" width="100%"
+                                <img src="globe.png" alt="change language" height="auto" width="100%"
                                     style='object-fit: scale-down;'>
                             </div>
                         </button>
@@ -41,18 +51,15 @@
         </table>
     </div>
 
-    <div style="height: 70%;" id="TableArea">
+    <div style="height: 65%;" id="TableArea">
     </div>
 
     <div style="height: 10%;" id="VoteArea">
-        <table style="height: 100%;" width="100%">
-            <tr>
-                <th align="left"><button style="height:100%" onclick="VoteUp()">More Of This</button></th>
-                <th></th>
-                <th align="right"><button style="height:100%" onclick="VoteDown()">Less Of This</button></th>
-            </tr>
-        </table>
-
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <button style="height:10vh" onclick="VoteUp()">More Of This</button>
+            <label id="DisplayProb"></label>
+            <button style="height:10vh" onclick="VoteDown()">Less Of This</button>
+        </div>
         <!-- <img src="thumb.png" alt="thumbs up png" height="100%" onclick="VoteUp()">
         <img style="padding-right: 50%;">
         <img src="thumb.png" alt="thumbs up png" height="100%" style="transform: scaleY(-1);" onclick="VoteDown()"> -->
@@ -60,8 +67,10 @@
 
     <embed src="version.html" height="100px"></embed>
 
-    <script type="text/javascript" src="code.js">
-    </script>
+    <script type="text/javascript" src="utils.js"></script>
+    <script type="text/javascript" src="preferances_weights.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+
 </body>
 
 </html>
