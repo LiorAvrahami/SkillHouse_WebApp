@@ -10,7 +10,7 @@ function sum(array) {
 function random_choice(weights) {
     let total_weights = sum(weights);
 
-    let r_val = Math.floor(Math.random() * total_weights);
+    let r_val = Math.random() * total_weights;
     for (let index = 0; index < weights.length; index++) {
         r_val -= weights[index];
         if (r_val <= 0) {
