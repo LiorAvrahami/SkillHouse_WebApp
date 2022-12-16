@@ -1,12 +1,12 @@
 
-let currentLanguageIdx = 0
-
 let MonthsAllLanguages = [
   ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
   ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"],
   ["תשרי", "חשוון", "כסלו", "טבת", "שבט", "אדר", "ניסן", "אייר", "סיוון", "תמוז", "אב", "אלול"]
 ]
+
+let currentLanguageIdx = load_language_index(MonthsAllLanguages.length);
 
 let Months = MonthsAllLanguages[currentLanguageIdx]
 let selectedMonthIdx = 0
@@ -114,6 +114,7 @@ function VoteDown() { alert("down"); }
 function ChangeLang() {
   currentLanguageIdx = (currentLanguageIdx + 1) % MonthsAllLanguages.length;
   Months = MonthsAllLanguages[currentLanguageIdx];
+  save_language_index(currentLanguageIdx);
   reDraw();
 }
 
