@@ -1,0 +1,17 @@
+/* hide all scroll-bars in this app*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+body {
+    font-size: 21px;
+}
+
+@media (pointer:none),
+(pointer:coarse) {
+    body {
+        font-size: 16px;
+    }
+
+}
